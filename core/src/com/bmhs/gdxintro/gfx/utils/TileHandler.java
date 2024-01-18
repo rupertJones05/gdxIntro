@@ -46,8 +46,8 @@ public class TileHandler {
         WorldTile oddGreenWorldTile = new WorldTile(tempRegion, 6, "oddGreen");
         worldTileArray.add(oddGreenWorldTile);
 
-        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*7, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile blueWorldTile = new WorldTile(tempRegion, 5, "blue");
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*2, spriteOnSheetHeight*1, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile blueWorldTile = new WorldTile(tempRegion, 7, "blue");
         worldTileArray.add(blueWorldTile);
 
 
