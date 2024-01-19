@@ -8,7 +8,7 @@ import com.bmhs.gdxintro.AppHandler;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-		config.setWindowedMode(1280, 768 );
+		config.setWindowedMode(800, 736 );
 		config.setForegroundFPS(60);
 		config.setTitle("LibGDX Intro");
 		new Lwjgl3Application(new AppHandler(), config);
