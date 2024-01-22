@@ -34,8 +34,8 @@ public class TileHandler {
         WorldTile orangeWorldTile = new WorldTile(tempRegion, 3, "orange");
         worldTileArray.add(orangeWorldTile);
 
-        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*8, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile yellowWorldTile = new WorldTile(tempRegion, 4, "green");
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*2, spriteOnSheetHeight*2, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile yellowWorldTile = new WorldTile(tempRegion, 4, "yellow");
         worldTileArray.add(yellowWorldTile);
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*10, spriteOnSheetWidth, spriteOnSheetHeight);
@@ -53,6 +53,10 @@ public class TileHandler {
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*2, spriteOnSheetWidth, spriteOnSheetHeight);
         WorldTile brownWorldTile = new WorldTile(tempRegion, 8, "brown");
         worldTileArray.add(brownWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*8, spriteOnSheetHeight*2, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile grayWorldTile = new WorldTile(tempRegion, 9, "gray");
+        worldTileArray.add(grayWorldTile);
 
 
     }
