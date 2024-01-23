@@ -17,7 +17,9 @@ public class AppHandler extends ApplicationAdapter {
 	TextureRegion subImg;
 	int x, y;
 
-	int[][] canvas = {{1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+	//int[][] canvas = new int[12][20];
+
+	 int[][] canvas = {{1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 				      {1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1},
 					  {1,1,1,1,1,0,9,1,1,1,0,1,1,1,0,0,0,0,1,1,0,1,1,1,1},
 					  {1,1,1,1,1,1,0,9,1,1,9,0,0,0,8,8,0,1,0,0,1,0,1,1,1},
@@ -40,20 +42,30 @@ public class AppHandler extends ApplicationAdapter {
 					  {1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,7,6,6,6,0,1,1,1,1},
 					  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1},
 					  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1}};
-	
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		//setRandomArray();
 		//subimg = new Texture("primaryColorSheet.png");
 		//subImg = new TextureRegion(subimg, 64, 0, 128, 128);
 		x = 0;
 		y = 0;
 	}
 
+	private void setRandomArray() {
+		for(int r = 0; r < canvas.length; r++) {
+			for(int c = 0; c < canvas.length; c++) {
+				canvas[r][c] = MathUtils.random(4);
+			}
+		}
+	}
+
 	@Override
 	public void render () {
 		ScreenUtils.clear(1, 0, 0, 1);
 		batch.begin();
+
 		for(int r = 0; r < canvas.length; r++) {
 			for(int c = 0; c < canvas[r].length; c++) {
 				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(canvas[r][c]).getTexture(), c*32, Gdx.graphics.getHeight()-32-(r*32));
